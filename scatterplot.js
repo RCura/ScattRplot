@@ -107,7 +107,7 @@ var color = d3.scale.category10();
 //move the append svg down here since depends on n
 svg = d3.select("#scatterplot").append("svg")
       .attr("width", size * n + padding)
-      .attr("height", size * n + padding)
+      .attr("height", size * n + (padding * 2))
     .append("g")
       .attr("transform", "translate(" + padding + "," + padding / 2 + ")");
   xAxis.tickSize(size * n);
