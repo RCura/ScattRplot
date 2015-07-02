@@ -5,9 +5,11 @@ reactiveSvg <- function (outputId)
   HTML(paste("<div id=\"", outputId, "\" class=\"shiny-scatterplot-output\"><svg /></div>", sep=""))
 }
 
+library(shinythemes)
 
 shinyUI(
-  fluidPage(theme = "simplex.bootstrap.min.css",
+  fluidPage(#theme = shinytheme("cosmo"),
+    theme = "simplex.bootstrap.min.css",
     tags$head(tags$link(rel = "icon", type = "image/png", href = "favicon.png"),
               includeScript('www/analytics.js')),
 
